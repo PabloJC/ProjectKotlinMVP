@@ -1,14 +1,14 @@
-package com.mibaldi.proyectkotlin.home
+package com.mibaldi.proyectkotlin.ui.adapters
 
 import android.support.v7.widget.RecyclerView
 import android.view.View
 import android.view.ViewGroup
-import com.mibaldi.proyectkotlin.models.Item
+import com.mibaldi.proyectkotlin.data.models.Item
 import com.mibaldi.proyectkotlin.R
 
-import com.mibaldi.proyectkotlin.inflate
-import com.mibaldi.proyectkotlin.loadUrl
-import kotlinx.android.synthetic.main.activity_detail.view.*
+import com.mibaldi.proyectkotlin.utils.inflate
+import com.mibaldi.proyectkotlin.utils.loadUrl
+import kotlinx.android.synthetic.main.view_item.view.*
 
 /**
  * Created by mikelbalducieldiaz on 21/5/17.

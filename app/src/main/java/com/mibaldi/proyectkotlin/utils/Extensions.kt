@@ -1,16 +1,16 @@
-package com.mibaldi.proyectkotlin
+package com.mibaldi.proyectkotlin.utils
 
 import android.app.Activity
 import android.content.Context
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.Toast
 import com.bumptech.glide.Glide
-import com.mibaldi.proyectkotlin.app.App
-import com.mibaldi.proyectkotlin.base.BaseMvpPresenter
-import com.mibaldi.proyectkotlin.home.HomePresenter
+import com.mibaldi.proyectkotlin.application.App
+import com.mibaldi.proyectkotlin.base.BaseMvpActivity
 
 /**
  * Created by mikelbalducieldiaz on 21/5/17.
@@ -28,3 +28,4 @@ fun ImageView.loadUrl(url: String) {
 }
 
 val Activity.app: App get() = application as App
+

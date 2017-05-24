@@ -1,23 +1,26 @@
-package com.mibaldi.proyectkotlin.home
+package com.mibaldi.proyectkotlin.ui.activities
 
 
 import android.os.Bundle
 import android.support.v7.widget.LinearLayoutManager
 import android.util.Log
 import android.view.View
-import com.mibaldi.proyectkotlin.detail.DetailActivity
 import com.mibaldi.proyectkotlin.R
-import com.mibaldi.proyectkotlin.app
+import com.mibaldi.proyectkotlin.utils.app
 import com.mibaldi.proyectkotlin.base.BaseMvpActivity
-import com.mibaldi.proyectkotlin.models.Item
-import com.mibaldi.proyectkotlin.repositories.Repository
+import com.mibaldi.proyectkotlin.ui.presenters.homeActivity.HomeModule
+import com.mibaldi.proyectkotlin.ui.presenters.homeActivity.HomePresenter
+import com.mibaldi.proyectkotlin.ui.adapters.ItemAdapter
+import com.mibaldi.proyectkotlin.ui.views.HomeContract
+import com.mibaldi.proyectkotlin.data.models.Item
+import com.mibaldi.proyectkotlin.data.repositories.Repository
 import kotlinx.android.synthetic.main.activity_main.*
 import javax.inject.Inject
 import javax.inject.Named
 
-class MainActivity : BaseMvpActivity<RepositoriesContract.View,
+class MainActivity : BaseMvpActivity<HomeContract.View,
         HomePresenter>(),
-        RepositoriesContract.View {
+        HomeContract.View {
 
     private var mAdapter: ItemAdapter? = null
 
@@ -51,7 +54,7 @@ class MainActivity : BaseMvpActivity<RepositoriesContract.View,
 
     private fun setUpRecyclerView() {
         mAdapter = ItemAdapter(ArrayList<Item>(), {
-            startActivity(DetailActivity.newIntent(this, it.id))
+            mPresenter.goToDetail(it.id)
         })
         recycler.layoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
         recycler.adapter = mAdapter

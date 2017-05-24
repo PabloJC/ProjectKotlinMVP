@@ -1,4 +1,4 @@
-package com.mibaldi.proyectkotlin.models
+package com.mibaldi.proyectkotlin.data.models
 
 /**
  * Created by mikelbalducieldiaz on 21/5/17.

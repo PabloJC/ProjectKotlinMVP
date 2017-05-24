@@ -1,4 +1,4 @@
-package com.mibaldi.proyectkotlin.app
+package com.mibaldi.proyectkotlin.application
 
 /**
  * Created by mikelbalducieldiaz on 21/5/17.

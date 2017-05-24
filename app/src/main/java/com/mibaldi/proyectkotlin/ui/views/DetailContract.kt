@@ -1,10 +1,10 @@
-package com.mibaldi.proyectkotlin.home
+package com.mibaldi.proyectkotlin.ui.views
 
-import com.mibaldi.proyectkotlin.models.Item
+import com.mibaldi.proyectkotlin.data.models.Item
 import com.mibaldi.proyectkotlin.base.BaseMvpPresenter
 import com.mibaldi.proyectkotlin.base.BaseMvpView
 
-object RepositoriesContract {
+object DetailContract {
 
     interface View : BaseMvpView {
         fun showOrganizations(items: List<Item>)

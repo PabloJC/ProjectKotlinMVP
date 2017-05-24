@@ -1,7 +1,7 @@
-package com.mibaldi.proyectkotlin.home.interactors
+package com.mibaldi.proyectkotlin.domain.interactors
 
-import com.mibaldi.proyectkotlin.models.Item
-import com.mibaldi.proyectkotlin.repositories.Repository
+import com.mibaldi.proyectkotlin.data.models.Item
+import com.mibaldi.proyectkotlin.data.repositories.Repository
 
 /**
  * Created by mikelbalducieldiaz on 21/5/17.
