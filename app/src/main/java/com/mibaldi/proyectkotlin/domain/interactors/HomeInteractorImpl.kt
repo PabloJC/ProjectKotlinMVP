@@ -1,6 +1,7 @@
 package com.mibaldi.proyectkotlin.domain.interactors
 
 import com.mibaldi.proyectkotlin.data.models.Item
+import com.mibaldi.proyectkotlin.data.models.Prefix
 import com.mibaldi.proyectkotlin.data.repositories.Repository
 
 /**
@@ -13,5 +14,8 @@ class HomeInteractorImpl(val repository: Repository) : HomeInteractor {
 
     override fun getCurrentItem(): Item {
         return repository.getListItems().first()
+    }
+    override fun getPrefixs() {
+        repository.requestPrefixs()
     }
 }

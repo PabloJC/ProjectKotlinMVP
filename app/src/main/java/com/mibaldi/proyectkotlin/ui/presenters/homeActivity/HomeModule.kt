@@ -1,5 +1,6 @@
 package com.mibaldi.proyectkotlin.ui.presenters.homeActivity
 
+import com.mibaldi.proyectkotlin.data.repositories.Repository
 import com.mibaldi.proyectkotlin.domain.interactors.HomeInteractor
 import com.mibaldi.proyectkotlin.domain.interactors.HomeInteractorImpl
 import com.mibaldi.proyectkotlin.ui.activities.MainActivity
@@ -13,8 +14,8 @@ import dagger.Provides
 class HomeModule(val activity: MainActivity) {
 
     @Provides
-    fun provideRepository(): HomeInteractor {
-        val interactor = HomeInteractorImpl(activity.repository)
+    fun provideRepository(repository: Repository): HomeInteractor {
+        val interactor = HomeInteractorImpl(repository)
         return interactor
     }
 }

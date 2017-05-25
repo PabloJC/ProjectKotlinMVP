@@ -24,9 +24,6 @@ class MainActivity : BaseMvpActivity<HomeContract.View,
 
     private var mAdapter: ItemAdapter? = null
 
-    @Inject
-    lateinit var repository: Repository
-
     @field:[Inject Named("ApiManager")]
     lateinit var something: String
 

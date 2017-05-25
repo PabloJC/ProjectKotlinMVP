@@ -17,6 +17,7 @@ class HomePresenter(context: MainActivity): BaseMvpPresenterImpl<HomeContract.Vi
     @Inject
     lateinit var interactor: HomeInteractor
 
+
     @Inject
     lateinit var router: Router
 
@@ -31,6 +32,8 @@ class HomePresenter(context: MainActivity): BaseMvpPresenterImpl<HomeContract.Vi
 
     override fun init() {
         component.inject(this)
+
+        interactor.getPrefixs()
         val currentItem = interactor.getCurrentItem()
         Log.d("PRESENTER",currentItem.toString())
     }

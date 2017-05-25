@@ -28,4 +28,3 @@ fun ImageView.loadUrl(url: String) {
 }
 
 val Activity.app: App get() = application as App
-
